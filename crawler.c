@@ -107,7 +107,7 @@ void getpage(char *url)
 	char urlbuffer[500]={0};
 	strcat(urlbuffer, "wget -O ");
 
-	strcat(urlbuffer,"/home/disha/Desktop/target/temp.txt ");
+	strcat(urlbuffer,"/home/gurleen/Desktop/target/temp.txt ");
 	strcat(urlbuffer, url);
 
 	system(urlbuffer);
@@ -122,13 +122,13 @@ char* newfile()
 	char str[100]={0};
 
 	strcat(str,"touch ");
-	strcat(str,"/home/disha/Desktop/target/");
+	strcat(str,"/home/gurleen/Desktop/target/");
 	sprintf(file,"%d",filecount);
 	strcat(file,".txt");
 	strcat(str,file);
 	filecount++;
 	system(str);
-	char f1[50]="/home/disha/Desktop/target/";
+	char f1[50]="/home/gurleen/Desktop/target/";
 	char *ptr=(char *)malloc(50*sizeof(char));
 	strcat(f1,file);
 	strcpy(ptr,f1);
@@ -139,7 +139,7 @@ char* newfile()
 void copyfile(char file[100])
 {
 	FILE *f1,*f2;
-	f1=fopen("/home/disha/Desktop/target/temp.txt","r");
+	f1=fopen("/home/gurleen/Desktop/target/temp.txt","r");
 	if(f1==NULL)
 	{
 	printf("File cant be opened\n");
@@ -160,7 +160,7 @@ void copyfile(char file[100])
 		size++;
 	}
 	fclose(f1);
-	f1=fopen("/home/disha/Desktop/target/temp.txt","w");
+	f1=fopen("/home/gurleen/Desktop/target/temp.txt","w");
 	fclose(f1);
 	fclose(f2);
 
