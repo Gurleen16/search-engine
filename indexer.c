@@ -32,11 +32,11 @@ int findfilesize(char *str)
 }
 void openfile(char *dir,int fileno)
 {
-  sprintf(dir,"/home/disha/Desktop/target/temp%d.txt",fileno);
+  sprintf(dir,"/home/gurleen/Desktop/target/temp%d.txt",fileno);
 }
 void putinfile(struct Node *new)
 {
-FILE *f=fopen("/home/disha/Desktop/target/index.txt","w");
+FILE *f=fopen("/home/gurleen/Desktop/target/index.txt","w");
 while(new!=NULL)
 {
 fprintf(f,new->word);
